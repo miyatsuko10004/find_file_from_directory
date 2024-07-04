@@ -6,6 +6,7 @@ find /home -type f -exec grep -F -l "hogehoge" {} +
 
 * -F: 固定文字列として"yjtag"を検索（正規表現を使用しない）
 * -l: マッチしたファイル名のみを出力
+  
 find /home -type f -print0 | xargs -0 -n 100 grep -F -l "yjtag"
 
 # 並列処理で高速化
